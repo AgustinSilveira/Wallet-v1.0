@@ -1,0 +1,179 @@
+body, html {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #EAF9E7;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+}
+
+#container-section {
+    background-color: white;
+    padding: 40px;
+    min-height: 100vh;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.container-header {
+    width: 100%;
+}
+
+#container-section h3 {
+    font-family: Comfortaa;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 5px 0px 5px 0px;
+}
+
+.container-login {
+    margin-top: 20px;
+}
+
+.container-login input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F4F5F8;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+    outline: none;
+}
+
+.container-login button {
+    background-color: #48A069;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: #F4F5F8;
+}
+
+.login-with {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.login-google {
+    background-color: #F4F5F8;
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+    padding: 5px 25px 5px 25px;
+    width: 50%;
+    color: #222428;
+}
+
+.login-facebook {
+    background-color: #3B5998;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    width: 50%;
+    color: #F4F5F8;
+}
+
+.login-google img {
+    display: inline;
+    margin: 0px 5px 5px 0px;
+}
+
+.login-facebook img {
+    display: inline;
+    margin: 0px 10px 5px 0px;
+}
+
+.style-register {
+    margin-top: 20px;
+    text-align: center;
+    color: #222428;
+}
+.style-register a {
+    color: #48A069;
+}
+
+#open-modal {
+    display: flex;
+    direction: rtl;
+    margin-top: 10px;
+}
+
+#open-modal img {
+    transform: scale(.75);
+}
+
+// MODAL
+
+.block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  ion-modal {
+    --height: auto;
+  }
+
+  .block p {
+    background-color: #F4F5F8;
+    margin: 15px 0px 15px 0px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .error-messages {
+    color: red;
+    text-align: center;
+  }
+
+  @media screen and (max-height: 733px) {
+    #container-section {
+        padding-top: 0px;
+    }
+  }
+
+@media screen and (max-height: 692px) {
+    .container-login {
+        margin-top: 0px;
+    }
+
+    .container-login input {
+        padding: 5px;
+    }
+    .text-responsive p{
+        font-size: 12px;
+    }
+    
+
+}
+
+@media screen and (max-height: 631px) {
+   #open-modal {
+    display: flex;
+    align-items: start;
+   }
+}
+@media screen and (max-height: 631px) {
+    #container-main img {
+        display: none;
+    }
+
+    #container-section {
+        padding-top: 20px;
+    }
+    body {
+        background-color: white;
+    }
+}
+
+
+
+

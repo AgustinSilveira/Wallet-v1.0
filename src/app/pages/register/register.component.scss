@@ -1,0 +1,167 @@
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #EAF9E7;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+}
+
+#container-main img {
+   z-index: 0;
+}
+
+#container-section {
+    background-color: white;
+    padding: 40px;
+    height: 80vh;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: 20px;
+    transform: translateY(-150px);
+}
+
+#container-section h3 {
+    font-family: Comfortaa;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 5px 0px 5px 0px;
+}
+
+.container-login {
+    margin-top: 20px;
+}
+
+.container-login input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F4F5F8;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    outline: none;
+}
+
+.container-login button {
+    background-color: #48A069;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: #F4F5F8;
+}
+
+.login-with {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.login-google {
+    background-color: #F4F5F8;
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+    padding: 5px 25px 5px 25px;
+    width: 50%;
+    color: #222428;
+}
+
+.login-facebook {
+    background-color: #3B5998;
+    padding: 10px;
+    border-radius: 0px 15px 15px 0px;
+    width: 50%;
+    color: #F4F5F8;
+}
+
+.login-google img {
+    display: inline;
+    margin: 0px 5px 5px 0px;
+}
+
+.login-facebook img {
+    display: inline;
+    margin: 0px 10px 5px 0px;
+}
+
+.style-register {
+    margin-top: 20px;
+    text-align: center;
+    color: #222428;
+}
+.style-register a {
+    color: #48A069;
+}
+
+#open-modal {
+    display: flex;
+    direction: rtl;
+    margin-top: 10px;
+}
+
+#open-modal img {
+    transform: scale(.75);
+}
+
+// IONIC CHECK
+
+ion-checkbox {
+    --size: 32px;
+    --checkbox-background-checked: #48A069;
+    margin-top: 15px;
+  }
+  
+  ion-checkbox::part(container) {
+    border-radius: 6px;
+    border: 2px solid #48A069;
+  }
+
+  .text-ion {
+    display: flex;
+    font-weight: 6;
+    font-size: 15px;
+    margin: 10px 0px 20px 0px;
+  }
+
+  .text-ion p {
+    margin: 10px 0px 0px 10px;
+  }
+
+  .text-ion a {
+    color: #48A069;
+  }
+
+//   estilos de los terminos y condiciones 
+.terms-message {
+    color: red; 
+    margin-top: 5px; 
+  }
+
+  @media screen and (max-height: 828px) {
+    #container-section {
+        transform: translateY(0px);
+    }
+    #container-main img {
+        display: none;
+    }
+    body {
+        background-color: white;
+    }
+}
+
+@media screen and (max-height: 635px) {
+    #container-section {
+        transform: translateY(-40px);
+    }
+    .text-ion p {
+        font-size: 13px;
+    }
+    .container-login input {
+        padding: 5px;
+    }
+    .text-ion {
+        margin: 0px;
+    }
+}

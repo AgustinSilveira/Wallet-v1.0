@@ -1,0 +1,132 @@
+body {
+    background-color: #E5EFE3;
+    padding: 20px;
+}
+
+ion-avatar { 
+    transform: scale(.75);
+}
+
+.ion-ava {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.img-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.img-back img {
+    position: absolute;
+}
+
+.tittle-send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-container {
+    width: 100%;
+    background-color: white;
+    height: 10vh;
+    border-radius: 15px;
+}
+
+ion-avatar {
+    height: 70px;
+    width: 70px;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-container p {
+  display: flex;
+}
+
+.amount-container {
+    width: 100%;
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.amount button {
+    width: 45px;
+    height: 44px;
+    border-radius: 15px;
+    background-color: #48A069;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.amount p {
+    font-size: 30px;
+    margin: auto;
+}
+
+.button-fast button {
+    width: 70px;
+    height: 35px;
+    background-color: #EAF9E7;
+    border-radius: 10px;
+    padding: 10px;   
+    color: #222428; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-fast button:active {
+    background-color: #4CAF50;  /* Cambiamos el color de fondo a verde cuando el botón está activo o en foco */
+    color: white;  /* Cambiamos el color del texto a blanco */
+}
+
+.button-fast button:focus {
+    outline: none; /* Para quitar el borde de enfoque predeterminado en algunos navegadores */
+}
+
+.button-fast {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    color: #48A069;
+    width: 140px;
+    height: 7vh;
+    background-color: white;
+    font-size: 16px;
+}
+
+.next {
+    color: white;
+    width: 140px;
+    height: 7vh;
+    background-color: #48A069;
+    font-size: 16px;
+}
+
+.button-end button {
+    border-radius: 10px;
+}
+
+.button-end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+

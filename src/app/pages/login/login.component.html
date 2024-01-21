@@ -1,0 +1,75 @@
+<body>
+  <header>
+    <div class="container-header"></div>
+  </header>
+
+  <form>
+    <main class="width-100">
+      <div id="container-main">
+        <img src="../../assets/header(1).svg" alt="">
+      </div>
+    </main>
+
+    <section>
+      <div id="container-section">
+
+        <div class="text-responsive">
+          <h3>Inicia sesión</h3>
+          <p>Inicia sesión con tu correo electrónico y
+            contraseña para usar tu cuenta de vendedor.</p>
+        </div>
+        <div class="container-login">
+          <form>
+            <input type="email" placeholder="Correo electrónico" [(ngModel)]="email" name="email" required
+              autocomplete="email">
+            <input type="password" placeholder="Contraseña" name="password" [(ngModel)]="password" required
+              autocomplete="current-password">
+
+            <button (click)="login()">Inicia sesión</button>
+
+            <!-- Mensaje de error -->
+            <div *ngIf="mensajeError" class="mensaje-error">
+              {{ mensajeError }}
+            </div>
+
+          </form>
+        </div>
+        <div class="login-with">
+          <button class="login-google" (click)="signInWithGoogle()">
+            <img src="../../assets/icon/Google Icon.svg" alt=""> Google
+          </button>
+          <button class="login-facebook" (click)="signInWithFacebook()">
+            <img src="../../assets/icon/Facebook Icon.svg" alt=""> Facebook
+          </button>
+        </div>
+
+        <p class="style-register">¿No tienes cuenta? - <a routerLink="/register">Regístrate</a></p>
+
+        <div id="open-modal"><img src="../../assets/icon/help-button(1).svg" alt=""></div>
+
+        <ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+          <ng-template>
+            <div class="block">
+              <div>
+                <p><a routerLink="/resetPass">Recuperar mi contraseña</a></p>
+              </div>
+
+              <div>
+                <p><a routerLink="/support">Soporte</a></p>
+              </div>
+            </div>
+          </ng-template>
+        </ion-modal>
+
+      </div>
+    </section>
+  </form>
+
+  <ion-loading
+    [message]="'Iniciando...'"
+    [duration]="2000"
+    [spinner]="'dots'"
+    [backdropDismiss]="false"
+    (ionLoadingDidDismiss)="onLoadingDismissed()">
+  </ion-loading>
+</body>

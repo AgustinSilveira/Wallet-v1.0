@@ -1,0 +1,108 @@
+ <body>
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+
+      <ion-list>
+        <a routerLink="/request-amount">
+          <ion-item style="cursor: pointer;" color="success" (click)="openMenuItem('item1')">Recibir dinero de otro usuario</ion-item>
+        </a>
+        <ion-item style="cursor: pointer;" color="danger" (click)="startScan()">Pagarle a otro usuario</ion-item>
+        <a routerLink="/transactions">
+          <ion-item style="cursor: pointer;"color="secondary" (click)="openMenuItem('item3')">Historial de transacciones</ion-item>
+        </a>
+        <ion-item style="margin-top: 10px; cursor: pointer;" (click)="signOut()">Cerrar sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-content id="main-content">
+<div class="container-header">
+  <div class="items-header">
+    <ion-buttons slot="start">
+      <ion-menu-button (click)="openMenu()"></ion-menu-button>
+    </ion-buttons>
+    <div class="ion-ava">
+      <ion-avatar>
+        <div class="img-avatar">
+          <img alt="foto de perfil" src="{{ photo }}" />
+        </div>
+      </ion-avatar>
+    </div>
+  </div>
+</div>
+
+
+<main>
+  <div class="container-main">
+
+  
+  <div class="main-tag">
+    <p class="p1">Hola,</p>
+    <p class="p2">{{ userName }}</p>
+    
+  </div>
+  <div class="container-balance">
+    <div>
+      <p class="p1-main">Tu balance</p> 
+    </div>
+    <div class="main-money">
+      <p class="p2-main">${{ formattedBalance }}</p>
+      <div style="cursor: pointer;" (click)="updateBalance(500)">
+        <img src="../../../assets/icon/add-button.svg" alt="">
+      </div>
+   
+    </div>
+  </div>
+</div>
+</main>
+
+  <section>
+    <div class="section-container">
+      <div class="items-section">
+       
+       <div class="container-button">
+        <div style="cursor: pointer;" class="button recibir">
+          <a routerLink="/request-amount">
+            <img src="../../../assets/icon/icon (1).svg">
+          </a>
+         </div>
+         <p>Recibir</p>
+       </div>
+
+       <div class="container-button">
+       <div style="cursor: pointer;" class="button pagar" (click)="startScan()">
+          <img src="../../../assets/icon/icon (2).svg"> 
+       </div>
+       <p>Pagar</p>
+       </div>
+
+       <div class="container-button">
+        <div style="cursor: pointer;" class="button transaccion" (click)="openMenuItem('item3')">
+          <div *ngIf="unreadTransactionsCount > 0" class="unread-count">{{ unreadTransactionsCount }}</div>
+          <a routerLink="/transactions">
+            <img src="../../../assets/icon/Vector (1).svg">
+          </a>
+        </div>
+        <p>Transacciones</p>
+      </div>
+
+      </div> 
+    </div>
+  </section>
+
+  <section>
+    <div class="container-qr">
+      <div style="cursor: pointer;" (click)="startScan()">    
+          <img src="../../../assets/icon/add-button(1).svg" alt="">
+      </div>
+      
+    </div>
+  </section>
+
+</ion-content>
+</body>

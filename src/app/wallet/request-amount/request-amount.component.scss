@@ -1,0 +1,179 @@
+body {
+    background-color: #E5EFE3;
+    padding: 20px;
+}
+
+.container-header {
+    width: 100%;
+    border-bottom: 1px solid rgb(247, 242, 242);
+    margin-bottom: 15px;
+}
+
+.items-header h2 {
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+}
+
+
+.items-header {
+    margin: auto;
+    height: 55px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.img-back img {
+    position: absolute;
+}
+
+.tittle-send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-container {
+    width: 100%;
+    background-color: white;
+    height: 10vh;
+    border-radius: 15px;
+}
+
+ion-avatar {
+    height: 50px;
+    width: 50px;
+    margin: 0px 0px 15px 15px;
+    border-radius: 50%;
+}
+
+ion-avatar img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-container p {
+  display: flex;
+}
+
+.amount-container {
+    background-color: white;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.amount button {
+    width: 45px;
+    height: 44px;
+    border-radius: 15px;
+    background-color: #48A069;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.amount p {
+    font-size: 30px;
+    margin: auto;
+}
+
+.button-fast button {
+    width: 70px;
+    height: 35px;
+    background-color: #EAF9E7;
+    border-radius: 10px;
+    padding: 10px;   
+    color: #222428; 
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 30px;
+}
+
+.button-fast button:active {
+    background-color: #4CAF50;  /* Cambiamos el color de fondo a verde cuando el botón está activo o en foco */
+    color: white;  /* Cambiamos el color del texto a blanco */
+}
+
+.button-fast button:focus {
+    outline: none; /* Para quitar el borde de enfoque predeterminado en algunos navegadores */
+}
+
+.button-fast {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    color: #48A069;
+    width: 140px;
+    height: 7vh;
+    background-color: white;
+    font-size: 16px;
+}
+
+.next {
+    color: white;
+    width: 140px;
+    height: 7vh;
+    background-color: #48A069;
+    font-size: 16px;
+}
+
+.button-end button {
+    border-radius: 10px;
+}
+
+.button-end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+}
+
+.container-message {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.container-message p {
+    color: #92949C;
+}
+
+.container-message input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+  
+    border: 1px solid #ccc;
+    padding: 35px;
+    border-radius: 4px;
+    width: 100%;
+  }
+

@@ -1,0 +1,50 @@
+<body>
+  <form>
+  <main class="width-100">
+    <div id="container-main">
+      <img src="../../assets/header (2).svg" alt="">
+    </div>
+  </main>
+
+  <section>
+    <div id="container-section">
+
+      <div>
+        <p>Por favor provéenos los siguientes datos para tu nueva cuenta</p>
+      </div>
+      <div class="container-login">
+        <input type="text" placeholder="Nombre de usuario" name="username" [(ngModel)]="username" required autocomplete="username">
+        <input type="email" placeholder="Correo electrónico" [(ngModel)]="email" name="email" required autocomplete="email">
+        <input type="password" placeholder="Contraseña" name="password" [(ngModel)]="password" required autocomplete="current-password">
+        <input type="file" (change)="onFileSelected($event)" accept="image/*">
+
+
+
+        <div class="text-ion">
+          <ion-checkbox [(ngModel)]="acceptedTerms" name="acceptedTerms" required></ion-checkbox>
+          <p>Al crear esta cuenta confirmo que
+            he leído y acepto los <a href="#">términos y condiciones</a></p>
+        </div>
+       
+        
+        <button (click)="signUp()" [disabled]="!acceptedTerms">Registrarme</button>
+      </div>
+      <div class="login-with">
+        <button class="login-google" (click)="signInWithGoogle()"> <img src="../../assets/icon/Google Icon.svg" alt=""> Google</button>
+        <button class="login-facebook"> <img src="../../assets/icon/Facebook Icon.svg" alt=""> Facebook</button>
+      </div>
+      <p class="style-register">¿Ya tienes una cuenta? - <a routerLink="/login">Inicia sesión</a></p>
+
+       </div>    
+  </section>
+  </form>
+  
+  <ion-loading
+  [message]="'Registrando...'"
+  [duration]="2000"
+  [spinner]="'dots'"
+  [backdropDismiss]="false" 
+  (ionLoadingDidDismiss)="onLoadingDismissed()">
+</ion-loading>
+
+</body>

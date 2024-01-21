@@ -1,0 +1,42 @@
+<body>
+  <header>
+    <div class="img-back">
+      <a routerLink="/request-amount">
+        <img src="../../../assets/icon/back.svg" alt=""> 
+      </a>
+    <div class="tittle-send">
+      <h2>Cobrar</h2>
+    </div>
+  </div>
+  </header>
+  <main>
+    <div class="info-main">
+      <h3>Código QR</h3>
+      <p>Muestrale tu codigo QR a la otra
+         persona para que pueda escanearlo</p>
+    </div>
+  </main>
+  <aside>
+    <div class="container-aside">
+      <div class="user-aside">
+        <ion-avatar>
+          <img alt="foto de perfil" src="{{ photo }}" />
+        </ion-avatar>
+        <div class="data-aside">
+          <p class="p1">Cuenta a nombre de:</p>      
+          <p class="p2">{{ userName }}</p>
+        </div>
+       
+      </div>
+      <div class="qr-aside">
+        <qrcode *ngIf="(qrData$ | async) as qrData" [qrdata]="qrData || '{}'" [width]="310" [errorCorrectionLevel]="'M'" title="Codigo QR"></qrcode>
+      </div>
+    </div>
+  </aside>
+
+  <!-- <div>
+    <p>{{ userName }} pide un monto de ${{ balance }}</p>
+    <p>Mensaje de {{ userName }}: {{ mensaje }}</p>
+  </div> -->
+</body>
+

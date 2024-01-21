@@ -1,0 +1,154 @@
+body {
+    background-color: #E5EFE3;
+}
+
+ion-avatar { 
+    transform: scale(.75);
+}
+
+.ion-ava {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.img-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.img-back img {
+    position: absolute;
+}
+
+.tittle-send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tittle-send h2 {
+    margin: 15px 25px 0px 0px;
+}
+
+
+.container-aside2 {
+    width: 100%;
+    height: 70px;
+}
+
+.aside-perfiles {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+   
+}
+
+.perfil {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    height: 100px;
+}
+
+.perfil ion-avatar {
+    min-width: 55px;
+    min-height: 55px;
+}
+
+.perfil p {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+.perfil-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.perfil-container p {
+    display: inline;
+    font-size: 18px;
+    margin: 5px 10px 0px 0px;
+}
+
+
+.perfil-container button {
+    background-color: #48A069;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    width: 96px;
+    display: block;
+}
+
+.footer-container {
+    background-color: #F4F5F8;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    bottom: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.footer-container p {
+    display: block;
+    margin-left: 20px;
+}
+
+.footer-container button {
+    width: 45px;
+    height: 45px;
+    border-radius: 15px;
+    margin: 0px 0px 0px 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tittle-footer {
+    margin-left: 20px;
+}
+
+.footer-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-button p {
+    margin-left: 5px;
+}
+
+.button1 {
+  background-color: #00313A;
+}
+
+.button1 img {
+    transform: translate(16px, 12px);
+}
+
+.button2 img {
+    transform: translate(13px, 12px);
+}
+
+
+
+.button2{
+    background-color: #48A069;
+} 
+
+ion-searchbar {
+    margin-bottom: 15px;
+}
+
+
+
+

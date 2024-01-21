@@ -1,0 +1,65 @@
+<body>
+  <header>
+    <div class="img-back">
+      <img src="" alt="">
+      <div class="tittle-send">
+        <h2>Resumen</h2>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="info-main">
+      <h3>Confirma el pago</h3>
+      <p>Asegúrate de que todo esté correcto antes de continuar</p>
+    </div>
+  </main>
+  <aside>
+    <div class="container-aside">
+      <div class="info">
+        <p>Resumen</p>
+      </div>
+      <div class="user-aside">
+        <ion-avatar>
+          <img alt="foto de perfil" src="{{ photo }}" />
+        </ion-avatar>
+        <div class="data-aside">
+          <p class="p1">{{ userName }}</p>
+          <p class="p2">+598 91 435729</p>
+        </div>
+      </div>
+      <div class="economic-data">
+        <div class="pay-commission">
+          <p>Pagar comisión (1,12%)</p>
+          <p class="p3">${{ comisionCalculada.toFixed(2) }}</p>
+        </div>
+        <div class="check">
+          <ion-toggle aria-label="Success toggle" color="success" [checked]="comisionActivada" (ionChange)="toggleComision()"></ion-toggle>
+        </div>
+      </div>
+      <div class="total">
+        <div>
+          <p>Pagarás:</p>
+          <p>Recibirá:</p>
+        </div>
+        <div>
+          <p>${{ monto }}</p>
+          <p>${{ monto - comisionCalculada }}</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div *ngIf="mensajeError" class="mensaje-error">
+    {{ mensajeError }}
+  </div>
+  <section>
+    <div class="button-end">
+      <div>
+        <button id="present-alert" class="back">Cancelar</button>
+        <ion-alert trigger="present-alert" header="¿Desea salir de aquí?" [buttons]="alertButtons"></ion-alert>
+      </div>
+      <div>
+        <button (click)="confirmPayment()" class="next">Confirmar</button>
+      </div>
+    </div>
+  </section>
+</body>

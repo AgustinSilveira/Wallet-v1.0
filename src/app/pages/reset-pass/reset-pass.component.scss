@@ -1,0 +1,139 @@
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #EAF9E7;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container-password {
+    transform: translateX(20px);
+}
+
+.container-password p {
+    margin: 20px 0px 0px 30px;
+}
+
+#container-main p {
+    font-weight: 10;
+    font-size: 15px;
+}
+
+
+
+#container-main h3 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: end;
+    display: flex;
+    align-items: center;
+}
+
+#container-section {
+    background-color: white;
+    padding: 40px;
+    height: 80vh;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: 70px;
+}
+
+#container-section h3 {
+    font-family: Comfortaa;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 5px 0px 5px 0px;
+}
+
+.container-login {
+    margin-top: 20px;
+}
+
+.container-login-p {
+    font-size: 25px;
+    font-weight: 40px;
+    text-align: center;
+}
+
+.container-login-p2 {
+    color: #92949C;
+    margin: 40px 0px 40px 0px;
+    font-size: 14px;
+}
+
+
+
+.container-password strong {
+    font-size: 20px;
+}
+
+
+.container-login button {
+    background-color: #48A069;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 15px;
+    color: #F4F5F8;
+    padding: 15px;
+}
+
+.error-message {
+    color: red;
+}
+
+.container-header {
+    height: 40px;
+    width: 100%;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#success-container h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#success-container p {
+    font-size: 12px;
+    text-align: center;
+}
+
+#success-container button {
+    padding: 20px;
+}
+
+#success-container button {
+    background-color: #48A069;
+    padding: 15px;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 15px;
+    color: #F4F5F8;
+}
+
+@media screen and (max-height: 726px) {
+    .container-login button {
+        margin-top: 5px;
+    }
+    .container-login {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    #container-section {
+        margin-top: 10px;
+    }
+}
+
+
+
+

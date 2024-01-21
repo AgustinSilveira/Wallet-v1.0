@@ -1,0 +1,56 @@
+
+<body>
+  <div class="container-header">
+    <div class="items-header">
+     <h2>Recibir monto</h2>
+    </div>
+  </div>
+  
+
+
+  <main>
+    <div class="container-main">
+      <h3>Ingresa un monto</h3>
+      <p>¿Cuánto dinero quieres cobrar?</p>
+    </div>
+  
+    <div class="amount-container">
+        <div class="amount">
+          <button (click)="monto(-100)">-</button>
+          <p>${{ formatBalance(balance) }}</p>
+          <button (click)="monto(100)">+</button>
+        </div>
+        <div>
+          <p>Acciones rapidas</p>
+        </div>
+        <div class="button-fast">
+          <button (click)="monto(500)">$500</button>
+          <button (click)="monto(1500)">$1500</button>
+          <button (click)="monto(2000)">$2000</button>
+        </div>
+    </div>
+
+    <div class="container-message">
+      <p>Mensaje</p>
+      <input [(ngModel)]="data" type="text" placeholder="Tienda de zapatos...">
+    </div>
+
+    <div class="button-end">
+      <div>
+        <a routerLink="/wallet">
+        <button class="back">Volver</button>
+      </a>
+      </div>
+      <div>
+        <a routerLink="/request-QR">
+          <button (click)="guardarInformacion()" class="next">Siguiente</button>
+        </a>
+      </div>
+      
+        
+    </div>
+  </main>
+
+</body>
+
+

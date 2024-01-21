@@ -1,0 +1,103 @@
+body {
+    background-color: #48A069;
+    padding: 20px;
+}
+
+.img-back {
+    margin-left: 10px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.img-back img {
+    position: absolute;
+}
+
+.tittle-send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info-main h3 {
+    color: white;
+}
+
+.info-main p {
+    color: #dde1ed;
+    font-size: 20px;
+    margin: 15px 0px 15px 0px;
+}
+
+.container-aside {
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+}
+
+ion-avatar {
+    margin: 15px;
+    height: 65px;
+    width: 65px;
+}
+
+ion-avatar img {
+    height: 100%;
+}
+
+.user-aside {
+    height: 90px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+   
+}
+
+.data-aside p {
+    margin: 0;
+}
+
+.p1 {
+    color: #92949C;
+    display: block;
+}
+
+.p2 {
+    font-size: 24px;
+}
+
+.qr-aside {
+    height: 410px;
+    background-color: #F4F5F8;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside, .info-main {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+@media screen and (max-height: 760px) {
+    .container-aside {
+        height: 400px;
+    }
+    .qr-aside {
+        height: 310px;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .qr-aside {
+        height: 200px;
+    }
+    .container-aside {
+        height: 200px;
+    }
+}

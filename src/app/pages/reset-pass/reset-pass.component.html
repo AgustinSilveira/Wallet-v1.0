@@ -1,0 +1,56 @@
+<body>
+
+    <header>
+        <div class="container-header">
+
+        </div>
+    </header>
+
+    <main id="container-main">
+        <div class="container-password">
+            <div>
+                <a routerLink="/login">
+                    <img src="../../assets/icon/back.svg" alt="">
+                </a>
+            </div>
+
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <p>
+                <strong>¡No te preocupes!</strong> <br> A nosotros también nos pasa muy seguido.
+            </p>
+        </div>
+        <div>
+            <img src="../../assets/fragme.svg" alt="">
+        </div>
+    </main>
+
+    <section>
+        <div id="container-section">
+
+            <div class="container-login" *ngIf="mostrarFormulario">
+                <p class="container-login-p">Recuperar contraseña</p>
+                <p class="container-login-p2">Por favor introduce tu correo electrónico para que puedas restaurar tu
+                    contraseña.</p>
+
+                <ion-input [(ngModel)]="email" type="email" fill="solid" label="Email" labelPlacement="floating"
+                    helperText="Enter a valid email" errorText="Invalid email" ngModel email></ion-input>
+
+                <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+
+
+                <button (click)="resetPassword()">Enviar</button>
+            </div>
+            <div id="success-container" *ngIf="!mostrarFormulario">
+                <div class="img-container">
+                    <img src="../../../assets/icon/Vector(1).svg" alt="">
+                </div>
+                <h4>¡La renovacion de contraseña ha sido enviada!</h4>
+                <p>Entra al correo electronico que enviastes para recuperar tu contraseña y cambiarla</p>
+                <button routerLink="/login" (click)="restablecerEstado()">Listo</button>
+              </div>
+        </div>
+
+    </section>
+
+
+</body>

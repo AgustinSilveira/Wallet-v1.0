@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" defaultHref="/wallet"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="tittle-send">Transacciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="section-transactions" (click)="onTransactionsClick()"></div>
+
+  <div class="search">
+    <ion-searchbar placeholder="Nombre del usuario" [(ngModel)]="searchTerm" (ionChange)="onSearchTermChange()"></ion-searchbar>
+  </div>
+
+  <ion-segment [(ngModel)]="segmentValue" (ionChange)="segmentChanged()">
+    <!-- Añade aquí los segmentos necesarios -->
+  </ion-segment>
+
+    <!-- Verificar si se deben mostrar las transacciones -->
+    <div class="section-transactions" *ngIf="showTransactions" (click)="onTransactionsClick()">
+      <!-- Aquí muestra el historial de transacciones -->
+      <ion-list *ngIf="searchResults.length > 0 && historialTransacciones.length > 0">
+        <ion-item *ngFor="let transaccion of historialTransacciones">
+          <!-- Filtrar el resultado de la búsqueda para encontrar el usuario correspondiente -->
+          <ng-container *ngIf="searchResults.length > 0 && getUserDisplayName(transaccion.receiverUid)">
+            <ion-label>
+              Le enviaste {{ transaccion.amount }} a
+              {{ getUserDisplayName(transaccion.receiverUid) }}
+            </ion-label>
+          </ng-container>
+        </ion-item>
+      </ion-list>
+
+  <!-- Mensaje si no hay historial de transacciones o resultados de búsqueda -->
+  <ion-text *ngIf="historialTransacciones.length === 0 && searchResults.length === 0" class="no-transacciones">
+    <p>No hay transacciones disponibles.</p>
+  </ion-text>
+</div>
+
+<!-- Mostrar el contador de transacciones no leídas si no se están mostrando las transacciones -->
+<div *ngIf="!showTransactions" class="unread-transactions-counter">
+  {{ sharedDataQR.getUnreadTransactionsCount$() | async }}
+</div>
+</ion-content>
